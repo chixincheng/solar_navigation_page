@@ -210,7 +210,7 @@ body {
   background-color: var(--swatch-primary);
 }
 .bigtitle{
-  display:flex;
+  display:block;
   padding-left: 10px;
   font-size: 24pt;
   height:20%;
@@ -219,6 +219,20 @@ body {
   border-color:black;
   background-color: linen;
   color:black;
+}
+#boxele{
+  font-family:Arial;
+  font-size:12pt;
+  font-weight:normal;
+  font-style:normal;
+  color:rgb(51,51,51);
+}
+.ATEXT{
+  font-family:Arial;
+  font-size:8pt;
+  font-weight:normal;
+  font-style:normal;
+  color:rgb(51,51,51);
 }
 
 
