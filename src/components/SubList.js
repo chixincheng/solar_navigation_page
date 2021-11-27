@@ -3,28 +3,15 @@ import React from "react";
 export default class SubList extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            color: "linen",
-        }
     }
     onDragStart = (event,index)=>{
         event.dataTransfer.setData("id", index);
     }
     onDragOver = (event)=>{
         event.preventDefault();
-        this.setState(prevState => ({
-            color:"var(--swatch-accent)"
-        }), () => {
-            //
-        });
     }
     onDragLeave = (event)=>{
         event.preventDefault();
-        this.setState(prevState => ({
-            color:"linen"
-        }), () => {
-            //
-        });
     }
     onDrop = (event,endindex) =>{
         let startindex = event.dataTransfer.getData("id");
@@ -38,20 +25,6 @@ export default class SubList extends React.Component {
             //
         });
         this.props.droplist(templist);
-    }
-    onMouseOver = () =>{
-        this.setState(prevState => ({
-            color: "black"
-        }), () => {
-            //
-        });
-    }
-    onMouseLeave = () =>{
-        this.setState(prevState => ({
-            color: "linen"
-        }), () => {
-            //
-        });
     }
     render(){
         let boxElement = <div id = "boxele"></div>
@@ -178,8 +151,6 @@ export default class SubList extends React.Component {
                 id= {this.props.index}
                 key= {this.props.index}
                 style = {{backgroundColor: backcolor}}
-                onMouseOver = {()=>{this.onMouseOver()}}
-                onMouseLeave = {()=>{this.onMouseLeave()}}
                 class ="bigtitle">
                 {this.props.name}
                 {boxElement}
